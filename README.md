@@ -26,9 +26,18 @@ An object containing paths to the original version and all requested transformed
 
 ```json
 [
-    {"label": "original", "name": "image1"},
-    {"label": "medium-greyscale", "name": "image2"},
-    {"label": "medium", "name": "image3"}
+    {
+        "label": "original",
+        "name": "7a9070e4016272e445fe11e0a73c748d4b4bad2039fbf350870a88a8b9c940d5.png"
+    },
+    {
+        "label": "medium-grayscale",
+        "name": "208d634ff4dec3952b5e9d4ae2fddf29cb8363d96add6bb7f3ac9c2bda0beaa3.png"
+    },
+    {
+        "label": "medium",
+        "name": "494e5d5bc7a20de5878bca08c84555e384959bef0edb486c69c3f5ec2f95e5a6.png"
+    }
 ]
 ```
 
