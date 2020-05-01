@@ -23,8 +23,5 @@
     "jimp": "^0.9.6",
     "log-timestamp": "^0.3.0",
     "multer": "^1.4.1"
-  },
-  "devDependencies": {
-    "ava": "^3.8.1"
   }
 }

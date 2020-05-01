@@ -1,10 +1,6 @@
 # Portal image
 A REST service providing a set of image editing capabilities.
 
-
-## Architecture
-![Architecture](./documentation/architecture.png)
-
 ## Endpoints
 ### POST /api/transform
 REST service with which you can
@@ -117,19 +113,26 @@ Turns an image into greyscale.
 
 No options available.
 
+## Environment variables
+| Name | Example value | Description | Required? |
+| ---- | ------------- | ----------- | -------- |
+| EUREKA_HOST | portal-eureka | Hostname of the Eureka server | optional
+| EUREKA_PORT | 8761 | Port that the Eureka server uses | optional
+| EUREKA_SERVICE_PATH | /eureka/apps/ | Service path of Eureka | optional
+| HOSTNAME | localhost | Hostname of the server on which this application can be reached. Used by Eureka | optional
+| PORT | 3000 | Port that the Node server should use | optional
+| IP_ADDRESS | 127.0.0.1 | IP address on which this application can be reached. Used by Eureka | optional
+
+## Architecture
+![Architecture](./documentation/architecture.png)
+
 ## Development
-### What do I need to do to install the app?
+### What do I need to do to install the app locally?
 1. Install Node 13+
 1. `npm install`
 
-### How to start the app?
+### How to start the app locally?
 `node app/app.js`
-
-### How to run tests?
-`npm test`
-
-As a testing framework, this project uses [AVA](https://github.com/avajs/ava).
-The testing requirements for this project are simple, so I looked for a simple, due relatively popular, testing framework.
 
 ### How to build the Docker image?
 `docker build . --tag=stainii/portal-image:[version]`
