@@ -1,6 +1,8 @@
 import Jimp from "jimp";
 
 export default async function (file, transformationDefinition) {
+    console.info("It's a grey world :(");
+
     let image = await Jimp.read(file);
     image = await image.greyscale();
     return new Promise((resolve, reject) => {

@@ -3,18 +3,15 @@ FROM ubuntu:16.04
 # Install Node
 RUN apt-get update -yq \
     && apt-get install curl gnupg -yq \
-    && curl -sL https://deb.nodesource.com/setup_8.x | bash \
+    && curl -sL https://deb.nodesource.com/setup_14.x | bash \
     && apt-get install nodejs -yq
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-RUN npm install
-RUN npm ci --only=production
+# Copy sources
+COPY app app
+WORKDIR app
 
-# Bundle app source
-COPY . .
+# Install dependencies and make necessary dirs
+RUN npm ci --only=production && mkdir data
 
 EXPOSE 3000
-ENTRYPOINT [ "node", "app.js" ]
+ENTRYPOINT [ "node", "app.js"]

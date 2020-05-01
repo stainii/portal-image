@@ -1,5 +1,5 @@
 import EurekaClient from 'eureka-js-client';
-import { PORT } from "./constants.js"
+import {PORT} from "../configuration/constants.js"
 
 const hostName = process.env.HOSTNAME || "localhost";
 const ipAddress = process.env.IP_ADDRESS || "localhost";

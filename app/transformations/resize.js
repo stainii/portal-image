@@ -1,6 +1,8 @@
 import Jimp from "jimp";
 
 export default async function (file, transformationDefinition) {
+    console.info("It's a small world after all.");
+
     const expectedWidth = parseInt(transformationDefinition.width);
     const expectedHeight = transformationDefinition.height ? parseInt(transformationDefinition.height) : undefined;
     const crop = !!transformationDefinition.crop;
