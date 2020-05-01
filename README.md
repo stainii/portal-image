@@ -138,8 +138,19 @@ No options available.
 `docker build . --tag=stainii/portal-image:[version]`
 
 ### How to publish?
-`docker login`
+`docker login`  
 `docker push stainii/portal-image:[version]`
 
 ### Release
-TODO
+On the dev branch, in app folder:
+1. Set version in package.json
+1. `git add package.json`
+1. `git commit -m "release [version]`
+1. `npm login`  
+1. `npm publish --access=public`
+1. `cd ..`
+1. `docker build . --tag=stainii/portal-image:[version]`  
+1. `docker push stainii/portal-image:[version]`    
+1. `git tag [version]`
+1. `git push --tags`
+1. merge with the master branch
