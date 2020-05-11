@@ -13,6 +13,7 @@ export function saveImages(...images) {
         stream.end();
     });
 }
+
 /**
  * Reads and returns bytes of an image.
  * @param imagePath path to the image
@@ -28,5 +29,22 @@ export function readImage(label, imagePath) {
                     resolve(new Image(label, stream));
                 }
             }));
+    });
+}
+
+/**
+ * Removes an image
+ * @param imagePath path to the image
+ * @returns {Promise<void|Error>}
+ */
+export function removeImage(imagePath) {
+    return new Promise((resolve, reject) => {
+        fs.unlink(imagePath, error => {
+            if (error) {
+                reject(error);
+            } else {
+                resolve();
+            }
+        });
     });
 }

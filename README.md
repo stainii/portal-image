@@ -52,6 +52,15 @@ An object containing paths to the original version and all requested transformed
 |-----| ----- | ---- |
 | 404 | if image with given name does not exist |  |
 
+### DELETE /api/remove/{imageName}
+**Returns:** 200 OK with empty body
+
+**Exceptions:**
+
+| HTTP code | occurs when | preconditions |
+|-----| ----- | ---- |
+| 404 | if image with given name does not exist |  |
+
 
 
 ## Transformations
