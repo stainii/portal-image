@@ -141,7 +141,9 @@ No options available.
 1. `npm install`
 
 ### How to start the app locally?
-`node app/app.js`
+`cd app; node app.js`
+
+*The app expects the "data" folder to be located in the same folder as in which the app is booted. That's why you need to cd to the "app" folder.*
 
 ### How to build the Docker image?
 `docker build . --tag=stainii/portal-image:[version]`
