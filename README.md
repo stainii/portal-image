@@ -118,7 +118,12 @@ Resizes the image to a desired size.
 | crop   | boolean | no      | If both width and height are given, and the aspect ratio of the desired image does not match the aspect ratio of the source image, is it allowed to crop the image so that the aspect ratio can be respected? |
 
 ### Greyscale
-Turns an image into greyscale.
+Turns an image's colors into greyscale.
+
+No options available.
+
+### Sepia
+Turns an image's colors into sepia.
 
 No options available.
 

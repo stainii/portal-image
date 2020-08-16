@@ -1,7 +1,7 @@
 import EurekaClient from 'eureka-js-client';
 import {PORT} from "../configuration/constants.js"
 
-const hostName = process.env.HOSTNAME || "localhost";
+const hostName = process.env.HOSTNAME || "localhost"; // TODO, for consistency, rename to HOST_NAME (both here as in docker-compose)
 const ipAddress = process.env.IP_ADDRESS || "localhost";
 const eurekaHost = process.env.EUREKA_HOST || "localhost";
 const eurekaPort = process.env.EUREKA_PORT || 8761;
