@@ -17,7 +17,7 @@ export default new EurekaClient.Eureka({
             '$': PORT,
             '@enabled': 'true',
         },
-        vipAddress: hostName,
+        vipAddress: "image",
         dataCenterInfo: {
             '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
             name: 'MyOwn',
