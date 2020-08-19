@@ -159,6 +159,7 @@ No options available.
 
 ### Release
 On the dev branch, in app folder:
+1. Remove everything in the data folder
 1. Set version in package.json
 1. `git add package.json`
 1. `git commit -m "release [version]`
