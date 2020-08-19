@@ -172,3 +172,4 @@ On the dev branch, in app folder:
 1. `git tag [version]`
 1. `git push --tags`
 1. merge with the master branch
+1. Mark the tag as a release on Github
