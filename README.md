@@ -167,6 +167,7 @@ On the dev branch, in app folder:
 1. `npm publish --access=public`
 1. `cd ..`
 1. `docker build . --tag=stainii/portal-image:[version]`  
+1. `docker login`
 1. `docker push stainii/portal-image:[version]`    
 1. `git tag [version]`
 1. `git push --tags`
