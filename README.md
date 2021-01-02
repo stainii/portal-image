@@ -11,9 +11,9 @@ REST service with which you can
 *Form data:*
 
 |field name | type   | required | meaning |
-|-----------|--------| -------- |-----|
+|-----------|--------| -------- |---------|
 | image     | file   | only if imageName is not provided      | image you want to (transform and) store |
-| imageName | file   | only if image is not provided      | image you want to (transform and) retrieve |
+| imageName | string | only if image is not provided      | image you want to (transform and) retrieve |
 | transformationDefinitions   | json | no      | JSON object containing a description of the transformations you would like to apply to the image. See [transformations](#transformations).   |
 
  
