@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/stainii/portal-image#readme",
   "dependencies": {
-    "eureka-js-client": "^4.4.2",
+    "eureka-js-client": "^4.5.0",
     "express": "^4.16.4",
     "jimp": "^0.9.6",
     "log-timestamp": "^0.3.0",

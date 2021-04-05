@@ -26,6 +26,8 @@ export default new EurekaClient.Eureka({
     eureka: {
         host: eurekaHost,
         port: eurekaPort,
-        servicePath: eurekaServicePath
+        servicePath: eurekaServicePath,
+        requestRetryDelay: 1000,
+        maxRetries: 100
     },
 });
