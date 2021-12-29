@@ -29,6 +29,15 @@ pipeline {
     }
   }
   post {
+      always {
+        cleanWs(cleanWhenAborted: true,
+                cleanWhenFailure: true,
+                cleanWhenNotBuilt: false,
+                cleanWhenSuccess: true,
+                deleteDirs: true,
+                disableDeferredWipeout: true,
+                notFailBuild: true)
+      }
       changed {
           script {
               emailext subject: '$DEFAULT_SUBJECT',
@@ -42,9 +51,6 @@ pipeline {
                   to: '$DEFAULT_RECIPIENTS'
           }
       }
-      always {
-          cleanWs()
-       }
   }
 
 }
